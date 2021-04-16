@@ -20,7 +20,7 @@ GHOSTWRITER_OPLOG_ID = os.environ["GHOSTWRITER_OPLOG_ID"]
 REDIS_HOSTNAME =os.environ["REDIS_HOSTNAME"]
 
 gwhead = {'Authorization': f"Api-Key {GHOSTWRITER_API_KEY}", "Content-Type": "application/json"}
-
+tj={}
 while True:
     authheader = {"accept":"text/plain","Content-Type":"application/json-patch+json"}
     authdata = {"userName":f"{COVENANT_USERNAME}","password":f"{COVENANT_PASSWORD}"}
