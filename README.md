@@ -20,6 +20,7 @@ Launch the service by using docker-compose:
 
 ``` bash
 docker-compose up
+```
 
 ## References
 
