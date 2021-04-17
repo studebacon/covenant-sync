@@ -102,8 +102,9 @@ while True:
 
     if cmds is not None:
         for cmd in cmds:
-            if cmd["gruntTasking"]:
-                commandid = cmd["id"] if cmd["id"] is not None else ""
+            if cmd["id"]:
+                gw_message = {}
+                commandid = cmd["id"]
                 entry = rconn.get(str(commandid))
                 if not entry:
                     #create new oplog entry
@@ -119,7 +120,6 @@ while True:
                         print(e)                        
                 else:
                     #update existing oplog
-                    gw_message = {}
                     redisdata = json.loads(entry.decode())
                     if redisdata:
                         #only update if previous output value was empty
