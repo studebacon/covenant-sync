@@ -20,7 +20,7 @@ REDIS_HOSTNAME =os.environ["REDIS_HOSTNAME"]
 
 SLEEP_TIME = 30
 
-rconn = redis.Redis(host=f"{REDIS_HOSTNAME}", port=6389, db=0)
+rconn = redis.Redis(host=f"{REDIS_HOSTNAME}", port=6379, db=0)
 gw_header = {'Authorization': f"Api-Key {GHOSTWRITER_API_KEY}", "Content-Type": "application/json"}
 cov_authheader = {"accept":"text/plain","Content-Type":"application/json-patch+json"}
 cov_authdata = {"userName":f"{COVENANT_USERNAME}","password":f"{COVENANT_PASSWORD}"}
